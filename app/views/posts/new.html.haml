@@ -1,0 +1,11 @@
+.main.posts-new
+  .container
+    %h1.form-heading 投稿する
+    = form_tag("/posts/create") do
+      .form
+        .form-body
+          - @post.errors.full_messages.each do |message|
+            .form-error
+              = message
+          %textarea{:name => "content"}= @post.content
+          %input{:type => "submit", :value => "投稿"}/
