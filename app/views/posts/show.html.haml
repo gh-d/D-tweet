@@ -19,3 +19,19 @@
         .post-menus
           = link_to("編集", "/posts/#{@post.id}/edit")
           = link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"})
+  -# コメント欄
+  -# .comment
+  -#   .comment__user
+  -#     .comment__user__image
+  -#     .comment__user__name name
+  -#   .comment__content
+  -#     qqqqqqqqqqqqqqqqqqq
+  -#   .comment__time
+  -#     2019-09-07 04:33:37 UTC
+  -# - if @current_user
+  -#   .comment-form
+  -#     = form_tag("#", method: :post) do
+  -#       .comment-form__form
+  -#         %textarea{:cols => "30", :name => "text", :placeholder => "コメントを入力してください", :rows => "2"}
+  -#       .comment-form__input
+  -#         %input{type: "submit", value: "SENT", class:"ppp"}
